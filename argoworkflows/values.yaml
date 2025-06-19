@@ -1,0 +1,6 @@
+controller:
+  serviceAccount:
+    create: true
+server:
+  service:
+    type: LoadBalancer
