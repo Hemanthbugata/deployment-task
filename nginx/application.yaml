@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/<your-org>/<your-nginx-repo>'
+    repoURL: 'https://github.com/Hemanthbugata/deployment-task.git'
     targetRevision: HEAD
     path: nginx
   destination:
