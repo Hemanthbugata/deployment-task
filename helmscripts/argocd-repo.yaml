@@ -1,20 +1,8 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta2
-kind: HelmRelease
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
 metadata:
-  name: argocd
-  namespace: argocd
+  name: argo
+  namespace: flux-system
 spec:
-  interval: 5m
-  releaseName: argocd
-  chart:
-    spec:
-      chart: argo-cd
-      version: "5.53.12" # Use latest stable
-      sourceRef:
-        kind: HelmRepository
-        name: argo
-        namespace: flux-system
-  values:
-    server:
-      service:
-        type: LoadBalancer
+  url: https://argoproj.github.io/argo-helm
+  interval: 10m
